@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Art Ticketing Platform</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Feedback</h1>
+        <p>Community can give reviews about the exhibition</p>
+    </header>
+
+    <main>
+        <!-- 用户反馈表单 -->
+        <section class="feedback-form">
+            <h2>Leave Your Feedback</h2>
+            <form id="feedbackForm">
+                <label for="orderNumber">Order Number:</label>
+                <input type="text" id="orderNumber" required placeholder="Enter your order number">
+
+                <label for="username">Name:</label>
+                <input type="text" id="username" required placeholder="Your name">
+
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+
+                <label for="comment">Your Review:</label>
+                <textarea id="comment" rows="4" required placeholder="Write your feedback"></textarea>
+
+                <label for="imageUpload">Upload Image:</label>
+                <input type="file" id="imageUpload" accept="image/*">
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- 用户评论展示 -->
+        <section class="reviews">
+            <h2>Community Reviews</h2>
+            <p><strong>Average Rating:</strong> <span>N/A</span></p>
+
+            <!-- 静态评论示例 -->
+            <div class="review-item">
+                <p><strong>John Doe</strong></p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p class="review-time">Reviewed on 2024-03-06</p>
+                <p>Amazing exhibition! Highly recommended.</p>
+                <img class="review-image" src="example.jpg" alt="Review Image">
+            </div>
+
+            <div class="review-item">
+                <p><strong>Jane Smith</strong></p>
+                <p>⭐⭐⭐⭐</p>
+                <p class="review-time">Reviewed on 2024-03-05</p>
+                <p>Great art pieces, but the venue was a bit crowded.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

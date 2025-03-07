@@ -1,0 +1,112 @@
+/* 全局样式 */
+body {
+    background-image: url('background.jpg'); /* 复古背景 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 固定 "About Us" 标题 */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1000;
+}
+
+/* 让导航栏固定在 "About Us" 下方 */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* 选中的导航项 */
+nav a:hover, nav a:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* 让内容避免被导航栏遮挡 */
+.content {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* 让每个部分默认隐藏，使用 :target 显示 */
+section {
+    display: none;
+    margin-bottom: 50px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 使用 :target 让点击的部分显示 */
+section:target {
+    display: block;
+}
+
+/* 默认显示第一个 section，避免页面加载时为空 */
+section:first-of-type {
+    display: block;
+}
+
+/* 团队成员样式 */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* 页脚 */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    margin-top: 50px;
+}
