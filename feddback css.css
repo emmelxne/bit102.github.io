@@ -1,0 +1,94 @@
+/* 全局样式 - 添加背景图 */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://cdn.pixabay.com/photo/2016/09/06/18/22/visitors-1649815_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* 头部样式 - 添加半透明背景，增强可读性 */
+header {
+    background: rgba(0, 0, 0, 0.7); /* 黑色半透明 */
+    color: white;
+    padding: 20px 0;
+}
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* 反馈表单 & 评论区 - 添加局部背景图 */
+.feedback-form, .reviews {
+    background: rgba(255, 255, 255, 0.9); /* 白色半透明 */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 表单输入框 & 选择框 & 文本域 */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 提交按钮 */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* 评论样式 */
+.reviews {
+    margin: auto;
+    text-align: center;
+}
+
+/* 单个评论 */
+.review-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+/* 评论时间 */
+.review-time {
+    font-size: 0.8em;
+    color: gray;
+}
+
+/* 评论图片 */
+.review-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .feedback-form, .reviews {
+        width: 90%;
+    }
+}
