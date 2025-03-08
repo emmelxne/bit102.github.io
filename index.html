@@ -3,37 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Booking</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
+    <title>Demuore Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-<body class="p-4">
-    <div class="exhibition-section">s
-        <h1 id="exhibitionName">Art Exhibition Name</h1>
-        <h2>Select Tickets</h2>
-        <div class="card p-3 mb-3">
-            <label>Adults (RM27.00)</label>
-            <input type="number" class="form-control ticket-qty" value="0" min="0" data-price="27" onchange="updateTotal()">
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <img src="logo.png" alt="Gallery Logo" class="logo">
+                <h1 class="gallery-title">Demuore Art Gallery</h1>
+            </div>
+            
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#" class="tickets-btn">Tickets</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+
+            <!-- User Account Logo (Restored) -->
+            <div class="user-account">
+                <a href="#" class="account-icon">
+                    <img src="user_logo.png" alt="User Account">
+                </a>
+                <div class="account-dropdown">
+                    <a href="#">Sign Up</a>
+                    <a href="#">Sign In</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Demuore Art Gallery</h2>
+                <p>Discover timeless art pieces and experience the beauty of artistic expression.</p>
+                <a href="#" class="buy-tickets-btn">Buy Tickets</a>
+            </div>
+        </section>
+
+        <!-- About Section (Restored) -->
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2 class="about-title">About Demuore</h2>
+                <div class="about-info">
+                    <p>Founded in 1995, Demuore Art Gallery has been a beacon of artistic brilliance for decades.</p>
+                    <p>Our mission is to inspire creativity, showcase emerging artists, and preserve timeless masterpieces.</p>
+                    <p>We host curated exhibitions, art workshops, and special events year-round to celebrate the beauty of art.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+<section id="events" class="events-section">
+    <h2 class="events-title">Events</h2>
+    <div class="events-container">
+        <!-- Event 1 -->
+        <div class="event-box">
+            <img src="event1.jpg" alt="Todo está dicho">
+            <h3>Todo está dicho</h3>
+            <p class="artist-name">Andreas Gursky</p>
+            <a href="event-details.html" class="explore-btn">Explore</a>
         </div>
-        <div class="card p-3 mb-3">
-            <label>Teens (RM18.00)</label>
-            <input type="number" class="form-control ticket-qty" value="0" min="0" data-price="18" onchange="updateTotal()">
+
+        <!-- Event 2 -->
+        <div class="event-box">
+            <img src="event2.jpg" alt="Manolo Valdés">
+            <h3>Manolo Valdés</h3>
+            <p class="artist-name">Ed Ruscha</p>
+            <a href="event-details.html" class="explore-btn">Explore</a>
         </div>
-        <div class="card p-3 mb-3">
-            <label>Children (RM17.00)</label>
-            <input type="number" class="form-control ticket-qty" value="0" min="0" data-price="17" onchange="updateTotal()">
+
+        <!-- Event 3 -->
+        <div class="event-box">
+            <img src="event3.jpg" alt="No puedes evitarlo">
+            <h3>No puedes evitarlo</h3>
+            <p class="artist-name">Banksy</p>
+            <a href="event-details.html" class="explore-btn">Explore</a>
         </div>
-        <div class="card p-3 mb-3">
-            <label>Students (RM18.00, ID required)</label>
-            <input type="number" class="form-control ticket-qty" value="0" min="0" data-price="18" onchange="updateTotal()">
+        <!-- Event 4 -->
+        <div class="event-box">
+            <img src="event4.jpg" alt="Amor inmoral">
+            <h3>Amor inmoral</h3>
+            <p class="artist-name">Ai Weiwei</p>
+            <a href="event-details.html" class="explore-btn">Explore</a>
         </div>
-        <div class="card p-3 mb-3">
-            <label>Seniors (RM18.00)</label>
-            <input type="number" class="form-control ticket-qty" value="0" min="0" data-price="18" onchange="updateTotal()">
-        </div>
-       
-        <h4>Total: <span id="ticketTotal">RM0.00</span></h4>
-        <button class="btn btn-primary">Proceed to Payment</button>
     </div>
+
+    <div class="explore-more-container">
+        <a href="event-details.html" class="explore-more-btn">Explore More</a>
+    </div>
+</section>
+    </main>
+    
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector(".navbar");
+      
+        window.addEventListener("scroll", function () {
+          let scrollTop = window.scrollY || document.documentElement.scrollTop;
+          
+          if (scrollTop > lastScrollTop) {
+            // 向下滚动，隐藏导航栏
+            navbar.style.transform = "translateY(-100%)";
+          } else {
+            // 向上滚动，显示导航栏
+            navbar.style.transform = "translateY(0)";
+          }
+      
+          lastScrollTop = scrollTop;
+        });
+      </script>
+
+    <footer>
+        <p>© 2025 Demuore Art Gallery. All rights reserved.</p>
+    </footer>
+
+    <script defer src="script.js"></script>
 </body>
 </html>

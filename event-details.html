@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibition Details - Demuore Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <img src="logo.png" alt="Gallery Logo" class="logo">
+                <h1 class="gallery-title">Demuore Art Gallery</h1>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#" class="tickets-btn">Tickets</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Exhibition Title -->
+        <section class="exhibition-header">
+            <h1>Exhibitions</h1>
+        </section>
+
+        <!-- Event Details Section -->
+        <section class="event-details">
+            <div class="event-content">
+                <img src="event1.jpg" alt="Todo está dicho" class="event-image">
+                <div class="event-info">
+                    <h2>Todo está dicho</h2>
+                    <p class="artist-name">By Andreas Gursky</p>
+                    <p class="event-dates">06 March - 10 March 2025</p>
+                    <p class="event-venue">Venue: Madrid</p>
+                    <p class="artist-details">
+                        Andreas Gursky is a renowned German photographer celebrated for his large-scale, high-resolution images that capture global landscapes, industry, and commerce. His work presents a hyperrealistic view of modern society, blending photography and digital manipulation to emphasize patterns, order, and chaos in contemporary life.
+                    </p>
+                    <a href="#" class="buy-tickets-btn">Buy Tickets</a>
+                </div>
+            </div>
+
+            <div class="event-content">
+                <img src="event2.jpg" alt="Manolo Valdés" class="event-image">
+                <div class="event-info">
+                    <h2>Manolo Valdés</h2>
+                    <p class="artist-name">By Ed Ruscha</p>
+                    <p class="event-dates">15 March - 19 March 2025</p>
+                    <p class="event-venue">Venue: Madrid</p>
+                    <p class="artist-details">
+                        Ed Ruscha is a leading figure in American Pop Art, known for his striking word paintings and unique interpretations of urban culture. His work often integrates elements of advertising and mass media, challenging perceptions of language, symbols, and the modern American experience.
+                    </p>
+                    <a href="#" class="buy-tickets-btn">Buy Tickets</a>
+                </div>
+            </div>
+
+            <div class="event-content">
+                <img src="event3.jpg" alt="No puedes evitarlo" class="event-image">
+                <div class="event-info">
+                    <h2>No puedes evitarlo</h2>
+                    <p class="artist-name">By Banksy</p>
+                    <p class="event-dates">22 March - 26 March 2025</p>
+                    <p class="event-venue">Venue: Madrid</p>
+                    <p class="artist-details">
+                        Banksy is an anonymous street artist whose politically charged graffiti and murals critique consumerism, war, and social injustice. His work, often infused with irony and dark humor, has gained global recognition, challenging authority and sparking debates about art’s role in activism.
+                    </p>
+                    <a href="#" class="buy-tickets-btn">Buy Tickets</a>
+                </div>
+            </div>
+
+            <div class="event-content">
+                <img src="event4.jpg" alt="Amor inmoral" class="event-image">
+                <div class="event-info">
+                    <h2>Amor inmoral</h2>
+                    <p class="artist-name">By Ai Weiwei</p>
+                    <p class="event-dates">30 March - 03 April 2025</p>
+                    <p class="event-venue">Venue: Madrid</p>
+                    <p class="artist-details">
+                        Ai Weiwei is a Chinese artist and activist whose work confronts issues of censorship, human rights, and cultural identity. His powerful installations, sculptures, and multimedia works use art as a form of protest, challenging political oppression and advocating for social change.
+                    </p>
+                    <a href="#" class="buy-tickets-btn">Buy Tickets</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section (Empty for now) -->
+        <section class="upcoming-events">
+            <h2>Upcoming Exhibitions</h2>
+            <div class="upcoming-container">
+                <!-- No events added yet. Waiting for user instructions. -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector(".navbar");
+      
+        window.addEventListener("scroll", function () {
+          let scrollTop = window.scrollY || document.documentElement.scrollTop;
+          
+          if (scrollTop > lastScrollTop) {
+            // 向下滚动，隐藏导航栏
+            navbar.style.transform = "translateY(-100%)";
+          } else {
+            // 向上滚动，显示导航栏
+            navbar.style.transform = "translateY(0)";
+          }
+      
+          lastScrollTop = scrollTop;
+        });
+      </script>
+
+    <footer>
+        <p>© 2025 Demuore Art Gallery. All rights reserved.</p>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
