@@ -1,6 +1,6 @@
-/* 全局样式 */
+/* Global Style */
 body {
-    background-image: url('background.jpg'); /* 复古背景 */
+    background-image: url('https://cdn.pixabay.com/photo/2023/09/11/12/41/camera-8246764_1280.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -9,10 +9,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 110px; /* 确保内容不会被 header 和 nav 遮挡 */
+    padding-top: 110px; /* Ensure that the content is not obscured by the header and nav */
 }
 
-/* 固定 "About Us" 标题 */
+/* Fixed "About Us" header */
 header {
     width: 100%;
     background: rgba(0, 0, 0, 0.85);
@@ -28,7 +28,7 @@ header {
     transition: top 0.3s ease-in-out;
 }
 
-/* 让导航栏固定在 "About Us" 下方 */
+/* Make the navigation bar fixed under "About Us". */
 nav {
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -37,10 +37,10 @@ nav {
     justify-content: center;
     gap: 20px;
     position: fixed;
-    top: 60px; /* 让导航栏正好贴在 header 下面 */
+    top: 60px; /* Make the navigation bar fit right under the header */
     left: 0;
     z-index: 999;
-    transition: top 0.3s ease-in-out; /* 添加动画 */
+    transition: top 0.3s ease-in-out; /* Adding Animation */
 }
 
 nav a {
@@ -52,19 +52,19 @@ nav a {
     transition: background 0.3s;
 }
 
-/* 选中的导航项 */
+/* Selected navigation items */
 nav a:hover, nav a:focus {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 }
 
-/* 让内容避免被导航栏遮挡 */
+/* Keep content from being obscured by the navigation bar */
 .content {
     margin-top: 20px;
     padding: 20px;
 }
 
-/* 让每个部分默认隐藏，使用 :target 显示 */
+/* Make each section hidden by default, and use :target to show it. */
 section {
     display: none;
     margin-bottom: 50px;
@@ -74,17 +74,14 @@ section {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    scroll-margin-top: 110px; /* 避免点击跳转后内容被导航栏遮挡 */
+    scroll-margin-top: 110px; /* Avoid the content being blocked by the navigation bar after clicking on the jump. */
 }
-
-
-
 
 section {
     display: block;
 }
 
-/* 团队成员样式 */
+/* Team Member Styles */
 .team {
     display: flex;
     justify-content: center;
@@ -105,7 +102,7 @@ section {
     border-radius: 50%;
 }
 
-/* 页脚优化 */
+/* footer */
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
