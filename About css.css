@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 110px; /* 确保内容不会被 header 和 nav 遮挡 */
 }
 
 /* 固定 "About Us" 标题 */
@@ -16,12 +17,15 @@ header {
     width: 100%;
     background: rgba(0, 0, 0, 0.85);
     text-align: center;
-    padding: 15px 0;
-    font-size: 1em;
+    padding: 10px 0;
+    font-size: 0.6em;
     font-weight: bold;
     text-transform: uppercase;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
+    transition: top 0.3s ease-in-out;
 }
 
 /* 让导航栏固定在 "About Us" 下方 */
@@ -32,9 +36,11 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 60px; /* 让导航栏正好贴在 header 下面 */
+    left: 0;
     z-index: 999;
+    transition: top 0.3s ease-in-out; /* 添加动画 */
 }
 
 nav a {
@@ -68,15 +74,13 @@ section {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    scroll-margin-top: 110px; /* 避免点击跳转后内容被导航栏遮挡 */
 }
 
-/* 使用 :target 让点击的部分显示 */
-section:target {
-    display: block;
-}
 
-/* 默认显示第一个 section，避免页面加载时为空 */
-section:first-of-type {
+
+
+section {
     display: block;
 }
 
@@ -101,12 +105,13 @@ section:first-of-type {
     border-radius: 50%;
 }
 
-/* 页脚 */
+/* 页脚优化 */
 footer {
-    position: relative;
-    bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
     margin-top: 50px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
 }
