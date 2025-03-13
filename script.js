@@ -1,14 +1,14 @@
 let isScrolling;
 
 window.addEventListener("scroll", function () {
-    // 隐藏导航栏
+    // Hide navigation bar
     document.querySelector("header").style.top = "-60px";
     document.querySelector("nav").style.top = "-60px";
 
-    // 清除之前的定时器
+    // Clear the previous timer
     clearTimeout(isScrolling);
 
-    // 设定定时器，在停止滚动 500ms 后恢复显示
+    // Set the timer to resume the display after 500ms of scrolling.
     isScrolling = setTimeout(() => {
         document.querySelector("header").style.top = "0";
         document.querySelector("nav").style.top = "60px";
