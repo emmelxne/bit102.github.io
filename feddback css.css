@@ -1,4 +1,4 @@
-/* 全局样式 - 添加背景图 */
+/* Global Styles - Add Background Image */
 body {
     font-family: Arial, sans-serif;
     background: url('https://cdn.pixabay.com/photo/2016/09/06/18/22/visitors-1649815_1280.jpg') no-repeat center center fixed;
@@ -9,9 +9,9 @@ body {
     text-align: center;
 }
 
-/* 头部样式 - 添加半透明背景，增强可读性 */
+/* Header Style - Add Translucent Background */
 header {
-    background: rgba(0, 0, 0, 0.7); /* 黑色半透明 */
+    background: rgba(0, 0, 0, 0.7); /* Black Translucent */
     color: white;
     padding: 20px 0;
 }
@@ -21,9 +21,9 @@ header {
     margin: 0;
 }
 
-/* 反馈表单 & 评论区 - 添加局部背景图 */
+/* Feedback Form & Comments Area - Add Local Background Image */
 .feedback-form, .reviews {
-    background: rgba(255, 255, 255, 0.9); /* 白色半透明 */
+    background: rgba(255, 255, 255, 0.9); /* White translucent */
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -32,7 +32,7 @@ header {
     text-align: center;
 }
 
-/* 表单输入框 & 选择框 & 文本域 */
+/* Form Input Boxes & Selection Boxes & Text Fields */
 input, select, textarea {
     width: 100%;
     padding: 10px;
@@ -40,7 +40,7 @@ input, select, textarea {
     border-radius: 5px;
 }
 
-/* 提交按钮 */
+/* Submit button */
 button {
     background-color: #28a745;
     color: white;
@@ -55,13 +55,13 @@ button:hover {
     background-color: #218838;
 }
 
-/* 评论样式 */
+/* Comment Style */
 .reviews {
     margin: auto;
     text-align: center;
 }
 
-/* 单个评论 */
+/* single comment */
 .review-item {
     background: rgba(255, 255, 255, 0.95);
     padding: 10px;
@@ -71,7 +71,7 @@ button:hover {
     word-wrap: break-word;
 }
 
-/* 评论时间 */
+/* Comment time */
 .review-time {
     font-size: 0.8em;
     color: gray;
@@ -86,7 +86,7 @@ button:hover {
     border-radius: 5px;
 }
 
-/* 响应式设计 */
+/* responsive design */
 @media (max-width: 768px) {
     .feedback-form, .reviews {
         width: 90%;
