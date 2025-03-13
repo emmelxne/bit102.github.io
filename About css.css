@@ -82,26 +82,68 @@ section {
 }
 
 /* Team Member Styles */
+#team-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* 背景轻微透明 */
+    backdrop-filter: blur(10px); /* 增加玻璃磨砂效果 */
+}
+
+#team-section h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#team-section p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
 .team {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .member {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
-    width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 220px;
+    backdrop-filter: blur(8px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .member img {
-    width: 100%;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
+.member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.member p {
+    font-size: 14px;
+    color: #eee;
+}
 /* footer */
 footer {
     width: 100%;
