@@ -51,6 +51,7 @@ body {
   display: flex;
   gap: 15px;
   list-style: none;
+  margin: 0 auto;
 }
 
 .nav-links a {
@@ -82,7 +83,9 @@ body {
 
 /* User Account Icon */
 .user-account {
-  position: relative;
+  position: fixed;
+  top: 10px;
+  right: 10px;
   display: inline-block;
 }
 
@@ -117,6 +120,96 @@ body {
 
 .user-account:hover .account-dropdown {
   display: block;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .logo {
+    max-width: 120px; /* Smaller logo for medium screens */
+  }
+
+  .gallery-title {
+    font-size: 1.6rem; /* Smaller title size */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Smaller font size for links */
+  }
+}
+@media screen and (max-width: 992px) {
+  /* Adjustments for tablets and smaller desktops */
+  .navbar {
+    flex-direction: column; /* Stack navbar items */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .logo {
+    max-width: 100px; /* Smaller logo for mobile */
+  }
+
+  .gallery-title {
+    font-size: 1.5rem; /* Adjust title size for mobile */
+  }
+
+  .account-icon img {
+    height: 30px; /* Smaller size for mobile */
+    width: 30px; /* Smaller size for mobile */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #2c2c2c;
+    text-align: center;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links.show {
+    max-height: 500px;
+    overflow-y: auto; /* Enables scrolling if menu overflows */
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .account-icon img {
+    height: 30px; /* Smaller size for mobile */
+    width: 30px; /* Smaller size for mobile */
+  }
+
+  .account-dropdown a {
+    padding: 8px; /* Smaller padding for mobile */
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
 }
 
 /* Hero Section (Home Page) */
@@ -155,6 +248,12 @@ body {
 
 .hero-content h2 {
   font-size: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 3rem;
+  }
 }
 
 .hero-content p {
@@ -228,54 +327,10 @@ footer {
   color: #fff;
 }
 
-/* Responsive Navigation */
-/* Hide Hamburger Menu on Desktop */
-.hamburger {
-  display: none;
-}
-
-/* Show Hamburger Menu Only on Mobile */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #fff;
-  }
-
-  .nav-links {
-    max-height: 0;
-    overflow: hidden;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #2c2c2c;
-    text-align: center;
-    transition: max-height 0.3s ease-in-out;
-  }
-
-  .nav-links.show {
-    max-height: 500px;
-    overflow-y: auto; /* Enables scrolling if menu overflows */
-    padding: 10px 0;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 10px;
-    font-size: 1.2rem;
-  }
-}
 /* Events Section */
 .events-section {
   height: auto;
-  background: url('eventpage.png') no-repeat center center/cover;
+  background: url('images/eventbg.jpg') no-repeat center center/cover;
   text-align: center;
   padding: 50px 20px;
   background-attachment: fixed;
@@ -285,11 +340,15 @@ footer {
 .events-title {
   font-size: 3rem;
   font-family: 'Playfair Display', serif;
-  color: #2c2c2c;
-  padding: 10px 20px;
-  border-bottom: 3px solid #ffa500;
+  color: white;
+  text-shadow: 
+        -1px -1px 0 rgba(0, 0, 0, 0.8),  
+         1px -1px 0 rgba(0, 0, 0, 0.8),
+        -1px  1px 0 rgba(0, 0, 0, 0.8),
+         1px  1px 0 rgba(0, 0, 0, 0.8);
+  padding: 5px 15px;
+  text-align: center;
   display: inline-block;
-  margin-bottom: 30px;
 }
 
 /* Events Container (2x2 Grid) */
@@ -535,7 +594,8 @@ footer {
 
 /* Venue Section */
 .venue-section {
-  background: #2c2c2c;
+  background: url('images/venuebg.jpg') no-repeat center center/cover;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -547,7 +607,7 @@ footer {
   max-width: 900px;
   width: 100%;
   padding: 20px;
-  background: #2c2c2c;
+  background: rgb(85, 62, 25);
   border: 2px solid #ffd700;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
