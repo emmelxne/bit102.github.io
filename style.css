@@ -216,7 +216,7 @@ body {
 
 .about-info p {
   font-size: 1.3rem;
-  color: #fff;
+  color: #f5f5f5;
   margin-bottom: 10px;
 }
 
@@ -253,10 +253,12 @@ footer {
     width: 100%;
     background: #2c2c2c;
     text-align: center;
+    transition: max-height 0.3s ease-in-out;
   }
 
   .nav-links.show {
     max-height: 500px;
+    overflow-y: auto; /* Enables scrolling if menu overflows */
     padding: 10px 0;
   }
 
@@ -273,9 +275,10 @@ footer {
 /* Events Section */
 .events-section {
   height: auto;
-  background: #fff;
+  background: url('eventpage.png') no-repeat center center/cover;
   text-align: center;
   padding: 50px 20px;
+  background-attachment: fixed;
 }
 
 /* Events Title */
@@ -300,9 +303,16 @@ footer {
   max-width: 900px;
 }
 
+/* Make the whole event-box clickable */
+.event-link {
+  text-decoration: none; /* Remove default link underline */
+  display: block;
+  width: 100%;
+}
+
 /* Event Box */
 .event-box {
-  background: #f8f8f8;
+  background: #2c2c2c;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -317,21 +327,22 @@ footer {
 }
 
 .event-box img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 250px; /* Set a consistent height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .event-box h3 {
   font-size: 1.5rem;
-  color: #2c2c2c;
+  color: #f5f5f5;
   margin-bottom: 5px;
 }
 
 .artist-name {
   font-size: 1rem;
-  color: #777;
+  color: #aaaaaa;
   margin-bottom: 10px;
 }
 
@@ -409,10 +420,9 @@ footer {
 }
 
 .event-image {
-  width: 50%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
+  width: 400px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Crop the image to fill the space */
   border-radius: 10px;
 }
 
@@ -472,3 +482,101 @@ footer {
     max-height: 300px;
   }
 }
+
+.upcoming-exhibitions {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.exhibitions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exhibition-item {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.exhibition-item img {
+  width: 300px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Crop the image to fill the space */
+  border-radius: 10px;
+}
+
+.exhibition-item h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.exhibition-item .artist {
+  font-size: 20px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.exhibition-item .date,
+.exhibition-item .venue {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.upcoming-exhibitions h2 {
+  color: black;
+}
+
+/* Venue Section */
+.venue-section {
+  background: #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.venue-container {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  background: #2c2c2c;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.venue-section h2 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.venue-section p {
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+}
+
+.venue-section .map {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.venue-section iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+}
+
