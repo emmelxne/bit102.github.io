@@ -24,10 +24,11 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Events</a></li>
+                <li><a href="#events">Events</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Schedule</a></li>
                 <li><a href="#" class="tickets-btn">Tickets</a></li>
+                <li><a href="#venue">Venue</a></li>
                 <li><a href="#">Help</a></li>
                 <li><a href="#">Feedback</a></li>
             </ul>
@@ -71,40 +72,60 @@
 <section id="events" class="events-section">
     <h2 class="events-title">Events</h2>
     <div class="events-container">
+        
         <!-- Event 1 -->
+    <a href="event-details.html" class="event-link">  
         <div class="event-box">
             <img src="event1.jpg" alt="Todo está dicho">
             <h3>Todo está dicho</h3>
             <p class="artist-name">Andreas Gursky</p>
-            <a href="event-details.html" class="explore-btn">Explore</a>
+            <span class="explore-btn">Explore</span>
         </div>
+    </a>
 
         <!-- Event 2 -->
+    <a href="event-details.html" class="event-link">      
         <div class="event-box">
             <img src="event2.jpg" alt="Manolo Valdés">
             <h3>Manolo Valdés</h3>
             <p class="artist-name">Ed Ruscha</p>
-            <a href="event-details.html" class="explore-btn">Explore</a>
+            <span class="explore-btn">Explore</span>
         </div>
-
-        <!-- Event 3 -->
+    </a>
+   
+         <!-- Event 3 -->
+    <a href="event-details.html" class="event-link"> 
         <div class="event-box">
             <img src="event3.jpg" alt="No puedes evitarlo">
             <h3>No puedes evitarlo</h3>
             <p class="artist-name">Banksy</p>
-            <a href="event-details.html" class="explore-btn">Explore</a>
+            <span class="explore-btn">Explore</span>
         </div>
+    </a>
+
         <!-- Event 4 -->
+    <a href="event-details.html" class="event-link"> 
         <div class="event-box">
-            <img src="event4.jpg" alt="Amor inmoral">
-            <h3>Amor inmoral</h3>
-            <p class="artist-name">Ai Weiwei</p>
-            <a href="event-details.html" class="explore-btn">Explore</a>
+            <img src="event4.jpg" alt="浮気">
+            <h3>浮気</h3>
+            <p class="artist-name">Yayoi Kusama</p>
+            <span class="explore-btn">Explore</span>
         </div>
+    </a>
     </div>
 
     <div class="explore-more-container">
         <a href="event-details.html" class="explore-more-btn">Explore More</a>
+    </div>
+</section>
+
+<section id="venue" class="section venue-section">
+    <div class="venue-container">
+        <h2 data-key="venue_title">Venue</h2>
+        <p data-key="venue_location">Círculo de Bellas Artes, Calle de Alcalá, 42, 28014 Madrid, Spain</p>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.573045352051!2d-3.699108225561433!3d40.41830825554573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288472c293df%3A0xa921f67f134d1c1a!2sC%C3%ADrculo%20de%20Bellas%20Artes!5e0!3m2!1sen!2smy!4v1741976209602!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
 </section>
     </main>
@@ -117,10 +138,10 @@
           let scrollTop = window.scrollY || document.documentElement.scrollTop;
           
           if (scrollTop > lastScrollTop) {
-            // 向下滚动，隐藏导航栏
+            // scroll down hides navbar
             navbar.style.transform = "translateY(-100%)";
           } else {
-            // 向上滚动，显示导航栏
+            // scroll up shows navbar
             navbar.style.transform = "translateY(0)";
           }
       
