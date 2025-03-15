@@ -474,8 +474,43 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .about-title {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .events-title {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
   .events-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack events on smaller screens */
+  }
+
+  .event-box {
+    max-width: 100%; /* Allow event box to take full width */
+  }
+
+  .about-info {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .about-info p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .buy-tickets-btn,
+  .about-btn,
+  .explore-more-btn {
+    font-size: 1rem; /* Adjust button font size for smaller screens */
+    padding: 8px 16px; /* Adjust button padding for smaller screens */
   }
 }
 
@@ -508,8 +543,9 @@ footer {
 }
 
 .event-image {
-  width: 400px; /* Set a fixed width */
-  height: 400px; /* Set a fixed height */
+  width: 100%; /* Set a fixed width */
+  max-width: 400px;
+  height: auto; /* Set a fixed height */
   object-fit: cover; /* Crop the image to fill the space */
   border-radius: 10px;
 }
@@ -592,9 +628,8 @@ footer {
 }
 
 .exhibition-item img {
-  width: 300px; /* Set a fixed width */
-  height: 300px; /* Set a fixed height */
-  object-fit: cover; /* Crop the image to fill the space */
+  width: 100%; 
+  object-fit: cover; 
   border-radius: 10px;
 }
 
@@ -624,7 +659,7 @@ footer {
 /* Venue Section */
 .venue-section {
   background: url('images/venuebg.jpg') no-repeat center center/cover;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -670,8 +705,36 @@ footer {
 .venue-section iframe {
   width: 100%;
   max-width: 600px;
-  height: 450px;
+  height: auto;
   border: none;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items */
+  }
+
+  .event-content {
+    flex-direction: column; /* Stack event details */
+  }
+
+  .event-image {
+    width: 100%; /* Full width for images */
+    max-height: 300px; /* Limit height */
+  }
+
+  .exhibition-item img {
+    width: 100%; /* Full width for exhibition images */
+    height: auto; /* Responsive height */
+  }
+
+  .venue-section h2 {
+    font-size: 2.5rem; /* Adjust title size for mobile */
+  }
+
+  .venue-section p {
+    font-size: 1rem; /* Adjust paragraph size for mobile */
+  }
 }
 
