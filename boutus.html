@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Demore Art</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="boutus.css">
+</head>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <img src="logo.png" alt="Gallery Logo" class="logo">
+                <h1 class="gallery-title">Demuore Art</h1>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="event-details.html" class="tickets-btn">Tickets</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>        
+    </header>
+
+    <body>
+
+        <div class="container text-center my-5">
+            <h1 class="faq-title">About Us</h1>
+            <p class="faq-subtitle">Demoure Art</p>
+        </div>
+
+        <div class="container">
+            <ul class="nav nav-tabs justify-content-center mb-4" id="aboutTabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#details">Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#history">Our History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#team-section">Our team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#contact">Contact</a>
+                </li>
+            </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active " id="details">
+                <p>Demuore Art , an art ticketing platform, is your gateway to the world of fine arts, connecting you with the most prestigious exhibitions, galleries, and museums around the globe.</p>
+                <p>We collaborate with internationally acclaimed museums, art fairs, and contemporary galleries to bring you the most immersive art experiences. Whether you're interested in Renaissance masterpieces or modern digital installations, we have something for every art lover.</p>
+                <p>Beyond ticketing, our platform aims to support the arts by promoting emerging artists, funding creative initiatives, and making art more accessible to everyone. A portion of every ticket purchase goes towards supporting independent artists and cultural projects.</p>
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Seamless Online Booking:</strong> Browse and book tickets for art exhibitions with a few simple clicks.</li>
+                    <li><strong>Exclusive Events & VIP Access:</strong> Gain early access to high-demand art showcases and private viewings.</li>
+                    <li><strong>Real-Time Updates:</strong> Stay informed with live updates on upcoming exhibitions and event changes.</li>
+                    <li><strong>Personalized Recommendations:</strong> Discover exhibitions tailored to your interests using AI-powered suggestions.</li>
+                    <li><strong>Digital & Secure Tickets:</strong> Receive instant e-tickets with QR codes for a smooth check-in experience.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="history">
+                <p>Our story began in <strong>2018</strong>, when a group of art enthusiasts and tech entrepreneurs recognized the challenges of booking art exhibition tickets. Many art lovers faced difficulties in finding reliable ticketing services, while galleries struggled to reach a wider audience. Thus, Art Ticketing Platform was born—designed to bridge the gap between exhibitions and audiences worldwide.</p>
+                <h3>Our Growth Over the Years</h3>
+                <ul>
+                    <li><strong>2018:</strong> The idea was conceived, and the first prototype was developed.</li>
+                    <li><strong>2019:</strong> We launched our beta platform, partnering with local galleries in Europe and North America.</li>
+                    <li><strong>2020:</strong> Expanded to Asia and introduced mobile ticketing with QR codes for seamless check-ins.</li>
+                    <li><strong>2021:</strong> AI-powered personalized recommendations and virtual exhibition tours were added.</li>
+                    <li><strong>2023:</strong> We reached <strong>1 million users</strong> and collaborated with renowned museums globally.</li>
+                    <li><strong>2025:</strong> Continues to innovate, offering NFT-based art ticketing and interactive event experiences.</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="team-section">
+                <h3>Meet Our Team</h3>
+                <p>Our dedicated team of art enthusiasts, tech innovators, and customer service experts work together to bring you the best art ticketing experience. Meet the people behind the platform!</p>
+                <div class="team">
+                    <div class="member">
+                        <img src="khooki.jpg" alt="Khooki">
+                        <h3>Khooki</h3>
+                        <p>Creative Visionary.</p>
+                    </div>
+                    <div class="member">
+                        <img src="doreen.jpg" alt="Doreen">
+                        <h3>Doreen</h3>
+                        <p>Tech Innovator.</p>
+                    </div>
+                    <div class="member">
+                        <img src="emmeline.jpg" alt="Emmeline">
+                        <h3>Emmeline</h3>
+                        <p>Experience Curator.</p>
+                    </div>
+                    <div class="member">
+                        <img src="zhangwenzhe.jpg" alt="ZHANG WENZHE">
+                        <h3>ZHANG WENZHE</h3>
+                        <p>Global Art Connector.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:demureart@ticket.com">demureart@ticket.com</a></p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Follow us on social media:</p>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Twitter</a></p>
+                
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector(".navbar");
+      
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.transform = "translateY(-100%)";
+            } else {
+                navbar.style.transform = "translateY(0)";
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+<footer>
+    <p>© 2025 Demuore Art. All rights reserved.</p>
+</footer>
+</body>
+</html>
