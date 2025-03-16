@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #333;
+    }
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -17,6 +25,7 @@ body {
 }
 
 .sidebar h2 {
+    color: #000;
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.5em;
@@ -78,7 +87,7 @@ section h2 {
     margin-bottom: 20px;
     font-size: 1.8em;
     font-weight: 600;
-    color: #333;
+    color: #000000;
 }
 
 table {
