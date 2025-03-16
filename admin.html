@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="#" class="nav-link" onclick="navigate('feedback')">Feedback Management</a></li>
+            <li><a href="#" class="nav-link" onclick="navigate('payments')">Payments</a></li>
+            <li><a href="#" class="nav-link" onclick="navigate('events')">Event Management</a></li>
+            <li><a href="#" class="nav-link" onclick="navigate('artwork')">Artwork Management</a></li>
+            <li><a href="#" class="nav-link" onclick="navigate('users')">User Management</a></li>
+            <li><a href="#" class="nav-link" onclick="navigate('settings')">Settings</a></li>
+            <li><a href="schedule.htm" class="nav-link">Schedule</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Welcome, Admin</h1>
+        </header>
+
+        <section id="feedback">
+            <h2>Feedback Management</h2>
+            <div class="feedback-container">
+                <h3>Received Feedback</h3>
+                <div id="feedback-list">
+                  
+                </div>
+            </div>
+        </section>
+
+        <section id="payments">
+            <h2>Payments Overview</h2>
+            <table>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>#12345</td>
+                    <td>$500</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>#12346</td>
+                    <td>$300</td>
+                    <td>Pending</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="events">
+            <h2>Event Management</h2>
+            <input type="text" placeholder="Event Title">
+            <input type="date">
+            <input type="time">
+            <button>Create Event</button>
+        </section>
+
+        <section id="artwork">
+            <h2>Artwork Management</h2>
+            <button>Upload New Artwork</button>
+        </section>
+
+        <section id="users">
+            <h2>User Management</h2>
+            <button>Manage Users</button>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <button>Update Settings</button>
+        </section>
+    </div>
+
+    <script>
+        function navigate(section) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.style.display = 'none');
+
+            const targetSection = document.getElementById(section);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => link.classList.remove('active'));
+
+            const activeLink = [...links].find(link => link.getAttribute('onclick')?.includes(section));
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => navigate('feedback'));
+
+        // Example feedback data
+        const feedbacks = [
+            { name: 'John Doe', email: 'john@example.com', feedback: 'Great event!' },
+            { name: 'Jane Smith', email: 'jane@example.com', feedback: 'Loved the art pieces.' }
+        ];
+
+        function displayFeedback() {
+            const feedbackList = document.querySelector('#feedback-list');
+            feedbackList.innerHTML = '';
+            feedbacks.forEach((feedback, index) => {
+                const feedbackItem = document.createElement('div');
+                feedbackItem.classList.add('feedback-item');
+                feedbackItem.innerHTML = `
+                    <div>
+                        <h3>${feedback.name}</h3>
+                        <p>${feedback.email}</p>
+                        <p>${feedback.feedback}</p>
+                    </div>
+                    <div class="feedback-actions">
+                        <button onclick="deleteFeedback(${index})">Delete</button>
+                    </div>
+                `;
+                feedbackList.appendChild(feedbackItem);
+            });
+        }
+
+        window.deleteFeedback = function(index) {
+            feedbacks.splice(index, 1);
+            displayFeedback();
+        };
+
+        document.addEventListener("DOMContentLoaded", displayFeedback);
+    </script>
+</body>
+
+</html>
