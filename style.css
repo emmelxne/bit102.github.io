@@ -102,11 +102,12 @@ body {
   background: #2c2c2c;
   border: 1px solid #ffd700;
   border-radius: 5px;
+  z-index: 1000;
 }
 
 .account-dropdown a {
   display: block;
-  padding: 10px;
+  padding: 15px;
   color: #ffd700;
   text-decoration: none;
 }

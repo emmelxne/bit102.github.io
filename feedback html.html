@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback - Art Ticketing Platform</title>
+    <title>Feedback - Demure Art</title>
     <link rel="stylesheet" href="feedback css.css">
 </head>
 <body>
@@ -23,18 +23,22 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="feedback html.html">Feedback</a></li>
             </ul>
-        </nav>
+       
+</header>
     </header>
 
     <main>
-        <h1 class="title">Feedback</h1>
-        <p>Community reviews about our exhibitions</p>
+        <section class="hero">
+            <h1 class="tittle">Feedback</h1>
+            <p>Community reviews about our exhibitions</p>
+        </section>
+        
         <!-- User Feedback Form -->
         <section class="feedback-form">
             <h2>Leave Your Feedback</h2>
             <form id="feedbackForm">
-                <label for="orderNumber">Order Number:</label>
-                <input type="text" id="orderNumber" required placeholder="Enter your order number">
+                <label for="orderNumber">Ticket Number:</label>
+                <input type="text" id="orderNumber" required placeholder="Enter your ticket number">
 
                 <label for="username">Name:</label>
                 <input type="text" id="username" required placeholder="Your name">
@@ -69,7 +73,7 @@
                 <p>⭐⭐⭐⭐⭐</p>
                 <p class="review-time">Reviewed on 2024-03-06</p>
                 <p>Amazing exhibition! Highly recommended.</p>
-                <img class="review-image" src="example.jpg" alt="Review Image">
+                <img class="review-image" src="eventpage.png" alt="Review Image">
             </div>
 
             <div class="review-item">
@@ -80,5 +84,29 @@
             </div>
         </section>
     </main>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector(".navbar");
+      
+        window.addEventListener("scroll", function () {
+          let scrollTop = window.scrollY || document.documentElement.scrollTop;
+          
+          if (scrollTop > lastScrollTop) {
+            // scroll down hides navbar
+            navbar.style.transform = "translateY(-100%)";
+          } else {
+            // scroll up shows navbar
+            navbar.style.transform = "translateY(0)";
+          }
+      
+          lastScrollTop = scrollTop;
+        });
+      </script>
+
+    <footer>
+        <p>© 2025 Demuore Art. All rights reserved.</p>
+    </footer>
+
+    <script defer src="script.js"></script>
 </body>
 </html>

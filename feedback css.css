@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 
@@ -73,44 +74,45 @@
 }
 
 .user-account {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    display: inline-block;
-  }
-  
-  .account-icon img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .account-dropdown {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background: #2c2c2c;
-    border: 1px solid #ffd700;
-    border-radius: 5px;
-  }
-  
-  .account-dropdown a {
-    display: block;
-    padding: 10px;
-    color: #ffd700;
-    text-decoration: none;
-  }
-  
-  .account-dropdown a:hover {
-    background: #ffa500;
-    color: #fff;
-  }
-  
-  .user-account:hover .account-dropdown {
-    display: block;
-  }
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+}
+
+.account-icon img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.account-dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #2c2c2c;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.account-dropdown a {
+  display: block;
+  padding: 15px;
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.account-dropdown a:hover {
+  background: #ffa500;
+  color: #fff;
+}
+
+.user-account:hover .account-dropdown {
+  display: block;
+}
   
   .hamburger {
     display: none;
@@ -192,34 +194,35 @@
     }
 }
 body {
-
-    height: 100%;
-    margin: 0;
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    background-color: #f8f8f8;
-    color: #333;
-    padding-top: 100px; 
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; 
     background: url('images/feedbg.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     margin: 0;
     padding: 0;
+    font-size: 1em;
     text-align: center;
+    z-index: -1;
+    padding-top: 100px;
     
+}
+.hero {
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
 }
 
 
-/* Header Style - Add Translucent Background */
-
 
 .title {
-    font-size: 2.5em;
-    margin: 0;
+    font: size 2.5rem;
+    font-weight: bold;
+    
 }
 
 /* Feedback Form & Comments Area - Add Local Background Image */
 .feedback-form, .reviews {
-    background: rgba(255, 255, 255, 0.9); /* White translucent */
+    background: rgba(255, 255, 255, 0.6); 
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -238,7 +241,7 @@ input, select, textarea {
 
 /* Submit button */
 button {
-    background-color: #28a745;
+    background-color: #bd884b;
     color: white;
     padding: 10px;
     border: none;
@@ -248,7 +251,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #ffc130;
 }
 
 /* Comment Style */
@@ -273,13 +276,20 @@ button:hover {
     color: gray;
 }
 
-/* 评论图片 */
+
 .review-image {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 10px auto;
     border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgb(85, 62, 25);
+  color: #fff;
 }
 
 /* responsive design */
