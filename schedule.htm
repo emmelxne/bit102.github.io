@@ -6,9 +6,28 @@
   <title>Event Schedule</title>
   <link rel="stylesheet" href="schedule.css">
 </head>
+<header>
+  <nav class="navbar">
+    <div class="logo-section">
+        <img src="logo.png" alt="Gallery Logo" class="logo">
+        <h1 class="gallery-title">Demuore Art</h1>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="schedule.htm">Schedule</a></li>
+        <li><a href="event-details.html" class="tickets-btn">Tickets</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="feedback html.html">Feedback</a></li>
+    </ul>
+</nav>
+</header>
 <body>
   <div class="container">
-    <h1>~ · Event Schedule · ~</h1>
+    <h1>Event Schedule</h1>
 
     <div id="upcoming-events">
       <h2>Upcoming Events</h2>
@@ -33,7 +52,28 @@
  
     </div>
   </div>
+  
+<script>
+   let lastScrollTop = 0;
+  const navbar = document.querySelector(".navbar");
 
-  <script src="schedule.js"></script>
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+      // scroll down hides navbar
+      navbar.style.transform = "translateY(-100%)";
+    } else {
+      // scroll up shows navbar
+      navbar.style.transform = "translateY(0)";
+    }
+
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+
+<script defer src="script.js"></script>
+<script src="schedule.js"></script>
 </body>
 </html>
