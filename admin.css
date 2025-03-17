@@ -7,11 +7,10 @@
     }
 
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background: url('bgp3.jpg') no-repeat center center fixed;
+    background: url('images/bgp3.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -22,14 +21,15 @@ body {
     height: 100vh;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+    position:relative;
 }
 
 .sidebar h2 {
     color: #000;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.5em;
-    font-weight: 600;
+    margin-bottom: 20px;
+
 }
 
 .sidebar ul {
@@ -38,10 +38,7 @@ body {
 }
 
 .sidebar li {
-    padding: 10px 20px;
     margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .sidebar li:hover {
@@ -62,10 +59,20 @@ body {
     border-radius: 5px;
 }
 
+
+
 .content {
     flex: 1;
     padding: 40px;
     background-color: rgba(244, 244, 249, 0.2);
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 header h1 {
@@ -75,12 +82,14 @@ header h1 {
     color: #333;
 }
 
+
 section {
     background-color: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
 }
 
 section h2 {
@@ -89,6 +98,11 @@ section h2 {
     font-weight: 600;
     color: #000000;
 }
+
+.table-responsive {
+    overflow-x: auto;
+}
+
 
 table {
     width: 100%;
@@ -173,3 +187,70 @@ button:hover {
 .feedback-actions button:hover {
     background: #fff184;
 }
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: relative;
+        
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Show sidebar */
+    }
+
+    .content {
+        padding: 20px;
+       
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sidebar {
+        width: 150px;
+        height: 100vh;
+        position: relative;
+        
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Show sidebar */
+    }
+    .content {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    input[type="text"], input[type="date"], input[type="time"], textarea {
+        font-size: 0.9em;
+    }
+
+
+
+    button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+
